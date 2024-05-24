@@ -435,6 +435,7 @@ private: System::Void btnSewaToyota_Click(System::Object^ sender, System::EventA
 	DetailSewa^ detailsewa = gcnew DetailSewa();
 	detailsewa->SetLabels(this->labelNamaMobilToyota->Text, this->labelHargaMobilToyota->Text);
 	detailsewa->Show();
+	//haiiii
 }
 };
 }
