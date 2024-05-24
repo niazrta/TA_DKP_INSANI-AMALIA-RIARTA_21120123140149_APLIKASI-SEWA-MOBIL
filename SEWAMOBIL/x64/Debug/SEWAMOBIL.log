@@ -1,0 +1,4 @@
+﻿  Login.cpp
+C:\Users\USER\source\repos\SEWAMOBIL\SEWAMOBIL\Login.cpp(6,6): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  Detail Sewa.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  SEWAMOBIL.vcxproj -> C:\Users\USER\source\repos\SEWAMOBIL\x64\Debug\SEWAMOBIL.exe
