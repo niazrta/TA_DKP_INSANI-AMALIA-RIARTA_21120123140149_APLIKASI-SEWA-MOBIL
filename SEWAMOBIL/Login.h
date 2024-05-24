@@ -124,8 +124,8 @@ namespace SEWAMOBIL {
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		static int usernameErrorCount = 0; // Variabel statis untuk menghitung jumlah kesalahan username
-		static int passwordErrorCount = 0; // Variabel statis untuk menghitung jumlah kesalahan password
+		static int usernameErrorCount = 0; 
+		static int passwordErrorCount = 0; 
 		const int maxAttempts = 3; // Batas maksimum percobaan
 
 		// Perulangan untuk memeriksa username
@@ -135,11 +135,11 @@ namespace SEWAMOBIL {
 				if (usernameErrorCount >= maxAttempts) {
 					MessageBox::Show("Terlalu banyak upaya, coba lagi nanti", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 					usernameErrorCount = 0; // Reset counter setelah menampilkan pesan
-					return; // Keluar dari metode setelah terlalu banyak percobaan
+					return;
 				}
 				else {
 					MessageBox::Show("Incorrect Username", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
-					return; // Keluar dari metode untuk menunggu upaya berikutnya
+					return;
 				}
 			}
 		}
@@ -148,21 +148,21 @@ namespace SEWAMOBIL {
 		for (int attempt = passwordErrorCount; attempt < maxAttempts; attempt++) {
 			if (textBox2->Text == "masuk") {
 				usernameErrorCount = 0; // Reset counter jika berhasil masuk
-				passwordErrorCount = 0; // Reset counter jika berhasil masuk
+				passwordErrorCount = 0; 
 				PilihMobil obj;
 				obj.ShowDialog();
-				return; // Keluar dari metode setelah dialog ditutup
+				return; // 
 			}
 			else {
 				passwordErrorCount++; // Increment counter jika password salah
 				if (passwordErrorCount >= maxAttempts) {
 					MessageBox::Show("Terlalu banyak upaya, coba lagi nanti", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 					passwordErrorCount = 0; // Reset counter setelah menampilkan pesan
-					return; // Keluar dari metode setelah terlalu banyak percobaan
+					return; 
 				}
 				else {
 					MessageBox::Show("Incorrect Password", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
-					return; // Keluar dari metode untuk menunggu upaya berikutnya
+					return; 
 				}
 			}
 		}

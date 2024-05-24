@@ -242,7 +242,7 @@ namespace SEWAMOBIL {
 	}
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	try {
-		// Validasi input (sesuaikan dengan kebutuhan Anda)
+		
 		if (textBoxNamaPenyewa->Text->Trim() == String::Empty ||
 			textBoxNoTelepon->Text->Trim() == String::Empty ||
 			numericUpDownDurasiSewa->Value <= 0) {
@@ -258,10 +258,10 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		String^ tanggalSewa = dateTimePickerTanggalSewa->Value.ToString("dd MMMM yyyy");
 		int durasiSewa = (int)numericUpDownDurasiSewa->Value;
 
-		// Bersihkan string harga (jika diperlukan)
+		// Bersihkan string harga
 		harga = harga->Replace("Rp", "")->Replace(".", "");
 
-		// Buat objek FormPembayaran dan tampilkan
+		
 		FormPembayaran^ formPembayaran = gcnew FormPembayaran();
 		formPembayaran->SetDetails(pilihanMobil, harga, namaPenyewa, noTelepon, tanggalSewa, durasiSewa);
 		formPembayaran->Show();
